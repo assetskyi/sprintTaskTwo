@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+<div layout:fragment="siteContent">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <form action="/add-request" method="post">
+        <div class="row">
+          <div class="col-12">
+            <label>ФИО : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" name="username" placeholder="ФИО :" required>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Курс : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" name="courseName" placeholder="Курс :" required>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Телефон : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="tel" class="form-control" name="phone" placeholder="Телефон :" required>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Комментарий : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" name="commentary" placeholder="Комментарий :" required>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <button class="btn btn-success">Добавить заявку</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</html>

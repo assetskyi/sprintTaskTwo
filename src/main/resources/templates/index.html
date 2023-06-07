@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+
+<div layout:fragment="siteContent">
+    <div class="row">
+        <div class="col-md-6" th:each="app : ${list}" style="border: 2px solid rgba(187,185,188); padding: 10px;">
+            <p style="font-size: 20px">
+                <strong th:text="${app.handled ? '' : '*(Новая) '}" style="font-weight: bold; color: red;"></strong>
+                <span>Заявка от </span>
+                <strong th:text="${app.username}"></strong>
+            </p>
+            <p style="font-size: 16px; color: rgba(136,135,137)">
+                <span>Курс: </span>
+                <strong th:text="${app.courseName}"></strong>
+            </p>
+            <p th:text="${app.commentary}"></p>
+            <p>
+                <strong th:text="${'Тел: ' + app.phone}"></strong>
+                <a th:href="@{'/details/' + ${app.id}}">Подробнее</a>
+            </p>
+        </div>
+    </div>
+</div>
+</html>
